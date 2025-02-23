@@ -3,14 +3,20 @@ export default function NavBar({ onBackClick, selectedMood}) {
         <>
             <div className="navbar center-container mt-4 bg-slate-100/5 py-2 my-2 rounded-[15px] shadow-xl ">
             <div className="navbar-start">
-                <button onClick={onBackClick} className="text-3xl btn btn-ghost btn-circle">
-                ⛩️ 
-                </button>
+            <a 
+    href="https://hianime.sx/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-3xl btn btn-ghost btn-circle hover:bg-primary/20 transition-colors duration-300"
+    title="Visit Haikyu!!"
+>
+    ⛩️ 
+</a>
             </div>
             <div className="navbar-center">
                 <a className="btn btn-ghost text-xl">
 
-                <h1>{selectedMood ? selectedMood : 'Mood2Anime'}</h1>
+                <h1>{selectedMood ? selectedMood : 'SugoiWatch'}</h1>
 
 
                 </a>
