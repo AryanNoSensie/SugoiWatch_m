@@ -3,7 +3,15 @@ import axios from 'axios';
 function PutAnime({ formData, setResponse, API_URL}) {
   const handleClick = async (e) => {
     e.preventDefault();
-    console.log("PutAnime")
+    try {
+      const AnimesData = {name: formData.name, rating: formData.rating};
+      const result  = await axios.put(`${API_URL}/${formData.id}`, AnimesData);
+      setResponse(JSON.stringify(result.data));
+      
+    } catch (error) {
+      console.log(error);
+      setResponse(JSON.stringify(error));
+    }
   };
 
   return (

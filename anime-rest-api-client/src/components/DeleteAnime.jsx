@@ -3,7 +3,15 @@ import axios from 'axios';
 function DeleteAnime({ formData, setResponse, API_URL}) {
   const handleClick = async (e) => {
     e.preventDefault();
-    console.log("DeleteAnime")
+    try {
+     
+      const result  = await axios.delete(`${API_URL}/${formData.id}`);
+      setResponse(JSON.stringify(result.data));
+      
+    } catch (error) {
+      console.log(error);
+      setResponse(JSON.stringify(error));
+    }
   };
 
   return (
