@@ -8,7 +8,7 @@ export default function MoodFilter({ selectedGenre, toggleGenre }) {
                 Discover top-rated Anime based on your mood
             </h1>
             <p>
-                How are you feeling right now?
+                Click on shrine and binge it up !!
             </p>
 
             <div className="grid lg:grid-cols-4 grid-cols-3 my-6 lg:gap-6 gap-4 mood-center-container">
