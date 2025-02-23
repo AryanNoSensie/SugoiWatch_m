@@ -1,16 +1,16 @@
 
-import './App.css'
+import './App.css';
+import ErrorBoundary from './components/ErrorBoundary';
+import ContentContainer from './components/ContentContainer';
 
 function App() {
- 
-  return(
-    <div>
-      <h1>hi there </h1>
-      <button className='btn btn-primary'>primary </button>
-      <button className='btn btn-secondary'>secondary</button>
+  return (
+    <div className="App">
+      <ErrorBoundary>
+        <ContentContainer />
+      </ErrorBoundary>
     </div>
-  )
-
+  );
 }
 
-export default App
+export default App;
